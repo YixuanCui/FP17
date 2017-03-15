@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OpenOdonto FP17 Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  * {
+      box-sizing: border-box;
+    }
+  .row::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+  [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+    </style>
+</head>
+<body>
+  <script>
+  function myFunction(g) {
+      var x = document.getElementById(g);
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+  }
+  </script>
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">OpenOdonto FP17 Application</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-edit"></span> New Form</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-question-sign"> Guidelines</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-inbox"></span> Completed Forms</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Support</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <br><br><br>
+  <p></p>
+  <p id="P1"></p>
+</div>
+
+<div class="row">
+
+<div class="col-1 menu">
+  <div class="panel-group" style="position:fixed">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse0">Menu</a>
+        </h4>
+      </div>
+      <div id="collapse0" class="panel-collapse collapse" style="position:fixed">
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#P1">Part 1</li>
+          <li class="list-group-item"><a href="#P2">Part 2</li>
+          <li class="list-group-item"><a href="#P3">Part 3</li>
+          <li class="list-group-item"><a href="#P4">Part 4</li>
+          <li class="list-group-item"><a href="#P5">Part 5</li>
+          <li class="list-group-item"><a href="#P5a">Part 5a</li>
+          <li class="list-group-item"><a href="#P6">Part 6</li>
+          <li class="list-group-item"><a href="#P7">Part 7</li>
+          <li class="list-group-item"><a href="#P8">Part 8</li>
+          <li class="list-group-item"><a href="#P9">Part 9</li>
+          <li class="list-group-item"><a href="#P10">Part 10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-7">
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default" id="P2">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="myFunction('guide1')">
+          Part 1 Provider name, address and location number</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+          <form action="/action_page.php">
+            Patient's NHS NO.:<br>
+            <input type="text" name="NHSNo" placeholder="e.g. 1234567890" maxlength="10"><br><br>
+            Provider full name:<br>
+            <input type="text" name="providerName" placeholder="e.g. Firstname Lastname" maxlength="40"><br>
+            Address:<br>
+            <textarea name="providerAddress" rows="10" cols="30" placeholder="Please enter full address including postcode."></textarea><br><br>
+            Performer number:<br>
+            <input type="text" name="performerNumber" placeholder="e.g. 123456" maxlength="6"><br>
+            <input type="checkbox" name="ProformerProvider"> Proformer number same as provider<br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P3">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="myFunction('guide2')">
+          Part 2 Patient Information</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P4">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="myFunction('guide3')">
+          Part 3 Incomplete Treatment and Treatment Dates</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P5">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="myFunction('guide4')">
+          Part 4 Exemptions and Remissions</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P5a">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" onclick="myFunction('guide5')">
+          Part 5 Treatment Category</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P6">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5a" onclick="myFunction('guide5a')">
+          Part 5a Clinical Data Set</a>
+        </h4>
+      </div>
+      <div id="collapse5a" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P7">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" onclick="myFunction('guide6')">
+          Part 6 Other services</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P8">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" onclick="myFunction('guide7')">
+          Part 7 NICE Guidance</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P9">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" onclick="myFunction('guide8')">
+          Part 8 NHSBSA Use Only</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default" id="P10">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" onclick="myFunction('guide9')">
+          Part 9 Declaration</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" onclick="myFunction('guide10')">
+          Patient Declaration</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">xxx</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-3">
+  <h1>Guidlines</h1>
+
+  <div id="guide1" style="display:none">
+    <p><strong>Patient’s NHS No. </strong>- Enter the 10 digit NHS number, this is an optional field.</p>
+    <p><strong>Provider Name Address and Contract Number </strong>- Enter the name address and contract number of the provider. This is required on every form.</p>
+    <p><strong>Performer number same as provider </strong>- Tick this box if the 6 digit performer number for this course of treatment is the same as the 6 digit provider number.</p>
+    <p><strong>Performer number </strong>- Enter the 6 digit number of the performer responsible for this course of treatment.</p><br>
+    <p><strong>Note: </strong>Either the performer number or a tick in the ‘Performer number same as Provider’ box must be present on every form.</p>
+  </div>
+  <div id="guide2" style="display:none">
+    <p><strong>Patient Surname </strong>- Enter the patient surname up to 14 alpha characters. This is required on every form.</p>
+    <p><strong>First Forename </strong>- Enter the patient forename up to 14 alpha characters. This is required on every form.</p>
+    <p><strong>House Number followed by street </strong>- Enter the patient house number or name and street. This is required on every form.</p>
+    <p><strong>City or Town </strong>- Enter the city or town of the patient address.</p>
+    <p><strong>County </strong>- Enter the county of the patient address.</p>
+    <p><strong>Postcode </strong>- Enter the patient postcode.<p>
+    <p><strong>Previous Surname </strong>- Enter the previous surname if the patient’s surname has changed since their last course of treatment was submitted.</p>
+    <p><strong>Title </strong>- Enter the patient title. For example Mr, Mrs, Miss.</p>
+    <p><strong>Sex </strong>- Sex of patient, tick M for Male or F for Female. This is required on every form.</p>
+    <p><strong>Date of Birth </strong>- Enter the patient date of birth 8 numerics, format ddmmyyyy. This is a required on every form. For example, 6 May 1990 is 06051990.</p>
+</div>
+  <div id="guide3" style="display:none">
+    <p><strong>Incomplete treatment </strong>- For banded courses of treatment commenced but not completed, tick one
+        of the boxes 1,2 or 3 to show the work that has been completed. The patient charge will be calculated
+        against whichever of these boxes is ticked. A charge band must also be present in part 5, showing the
+        treatment that has been started, so the band ticked in part 5 must be the same as, or higher than, the band ticked in part 3.</p>
+    <p><strong>Date of Acceptance </strong>- Enter date of acceptance for the course of treatment. This is required on every form.</p>
+    <p><strong>Completion same as Acceptance Date </strong>- Tick this box if the date of completion is the same as the date of acceptance.</p>
+    <p><strong>Completion or Last Visit </strong>- Enter date of completion if the course was completed, or the date of last visit if it was not completed. All forms should be submitted
+        within 2 months of the date of completion. If a decision is made to mark the form as incomplete, it should be submitted as quickly as possible.</p><br>
+    <p><strong>Note: </strong>It is a mandatory requirement to enter either <strong>Completion same as Acceptance Date or Completion or last visit.</strong></p>
+  </div>
+  <div id="guide4" style="display:none">
+    <p><strong>Patient Under 18 </strong>– Tick this box if patient is under 18.</p>
+    <p><strong>Full Remission – HC2 cert. </strong>– Tick this box if patient is named on an HC2 certificate.</p>
+    <p><strong>Partial remission – HC3 cert. </strong> – Tick this box if patient is named on an HC3 certificate.</p>
+    <p><strong>Expectant Mother </strong>– Tick this box if the patient is pregnant.</p>
+    <p><strong>Nursing Mother </strong>– Tick this box if the patient had a baby in the last 12 months</p>
+    <p><strong>Aged 18 in full time education </strong>– Tick this box if the patient is aged 18 and under 19 and in full time education.</p>
+    <p><strong>Income Support </strong>– Tick this box if the patient or patient’s partner receives Income Support.</p>
+    <p><strong>NHS Tax Credit Exemption </strong>– Tick this box if the patient is named on a NHS Tax Credit Exemption Certificate.</p>
+    <p><strong>Income-based Jobseekers Allowance </strong>– Tick this box if the patient or patient’s partner receives Income-based Jobseekers Allowance.</p>
+    <p><strong>Pension Credit Guarantee Credit </strong>– Tick this box if the patient or patient’s partner receive Pension Credit Guarantee Credit.</p>
+    <p><strong>Prisoner </strong>– Tick this box if the patient is in prison or a young offenders institution.</p>
+    <p><strong>Income related employment and support allowance </strong>- Tick this box if the patient or patient’s partner receive Income related employment and support allowance.</p>
+    <p><strong>Universal Credit </strong>- Tick this box if the patient or patient’s partner receive universal credit.</p>
+    <p><strong>Evidence of Exemption or Remission seen </strong>– Tick either the Yes or No box to indicate whether the patient provided evidence of exemption of remission.</p>
+    <p><strong>Patient Charge Collected </strong>- Enter any NHS patient charge that has been collected for this course of treatment.</p>
+  </div>
+  <div id="guide5" style="display:none">
+    <p><strong>Band 1 </strong>– Tick this box for a course of treatment that falls into charge band 1.</p>
+    <p><strong>Band 2 </strong>- Tick this box for a course of treatment that falls into charge band 2.</p>
+    <p><strong>Band 3 </strong>– Tick this box for a course of treatment that falls into charge band 3.</p>
+    <p><strong>Urgent Treatment </strong>– Tick this box for treatment that falls in the band 1 urgent treatment category.</p>
+    <p><strong>Regulation 11 replacement appliance </strong>– Tick this box if a non orthodontic replacement appliance under regulation 11 has been provided – Parts 1,2,3 need to be completed and a patient charge entered in part 4 whichshould be 30% of the band 3 charge per appliance.</p>
+    <p><strong>Prescription only </strong>- Tick this box if the only treatment provided, during this course of treatment, is the issue of a prescription. No patient charge will be deducted.</p>
+    <p><strong>Denture Repairs </strong>- Tick this box if the only treatment provided, during this course of treatment, is for denture repairs. No patient charge will be deducted.</p>
+    <p><strong>Bridge Repairs </strong>– Tick this box if the only treatment provided, during this course of treatment, is for bridge repairs. No patient charge will be deducted.</p>
+    <p><strong>Arrest of Bleeding </strong>– Tick this box if the only treatment provided, during this course of treatment, is for the arrest of bleeding. No patient charge will be deducted.</p>
+    <p><strong>Removal of Sutures </strong>– Tick this box if the only treatment provided, during this course of treatment, is for the removal of sutures. No patient charge will be deducted.</p><br>
+    <p><strong>Note: Only one of these boxes can be ticked on each form.</strong></p>
+  </div>
+  <div id="guide5a" style="display:none">
+    <p><strong>Scale and Polish </strong>- This box should be ticked if a scale and polish is carried out.</p>
+    <p><strong>Fluoride Varnish </strong>– Tick this box to indicate that a topical fluoride preparation has been applied to the surfaces of any permanent teeth as a primary preventive measure.</p>
+    <p><strong>Fissure Sealants </strong>– Enter the number of permanent teeth where sealant material has been applied to the pit and fissure systems as a primary preventive measure.</p>
+    <p><strong>Radiographs taken </strong>– The total number of radiographs taken should be entered in this box irrespective of the type or size. For example 2 bite wings and 1 panoral = 3 radiographs.</p>
+    <p><strong>Endodontic treatment </strong>– The number of teeth endodontically treated should be entered in this box.</p>
+    <p><strong>Permanent Fillings and Sealant Restorations </strong>– Enter the number of teeth (not the total number of individual restorations) that have been therapeutically treated by the placement of
+        directly applied permanent restorations, namely;<br> I. Permanent fillings in amalgam, composite resin, synthetic resin, glass ionomer, compomers, silicate
+        or silicophosphate materials (includes any acid-etch of pin retention).<br> II. Sealant restorations involving the placement of composite resin, glass ionomer or compomer  material.</p>
+    <p><strong>Extractions </strong>– The number of teeth extracted should be entered into this box. This also includes surgical removal of a buried root, unerupted tooth, impacted tooth or exostosed tooth.</p>
+    <p><strong>Crown(s) provided </strong>– The figure entered in this box is the <strong>number of teeth</strong> that have been provided with laboratory fabricated permanent crowns as a finished
+        restoration on this course of treatment.<br> I. The crowns may be full or three quarter crowns but must be in a permanent material. Any post, pins or cores for retention are not counted separately.</p>
+    <p><strong>Upper denture – Acrylic </strong>– This box is completed when an acrylic or resin based denture is provided (i.e. full or partial denture). The number of teeth present on the denture should be entered.</p>
+    <p><strong>Lower denture – Acrylic </strong>– This box is completed when an acrylic or resin based denture is provided (i.e. full or partial denture). The number of teeth present on the denture should be entered.</p>
+    <p><strong>Upper Denture – Metal </strong>– This box is completed when  a metal based denture is provided (i.e. full or partial denture). The number of teeth present on the denture should be entered.</p>
+    <p><strong>Lower Denture – Metal </strong>– This box is completed when a metal based denture is provided (i.e. full or partial denture). The number of teeth present on the denture should be entered.</p>
+    <p><strong>Veneer(s) applied </strong>– This is the number of teeth that have been provided with laboratory fabricated veneers in any permanent material. They may be on the labial or palatal surface.</p>
+    <p><strong>Inlay(s) </strong>– The number of teeth provided with inlays, pinlays or onlays, using an indirect technique and permanent material.</p>
+    <p><strong>Bridge(s) fitted</strong> This box is completed when a bridge or more than one bridge is fitted. The number entered is the <strong>total number of units</strong> that the bridge(s) spans (i.e.
+        include the number of retainers and pontics together). Adhesive bridges are entered in a similar manner and the total number of units includes the pontic(s) and any associated ‘wings’.</p>
+    <p><strong>Referral for advanced mandatory services</strong>– Enter the band of the treatment to be provided under advanced mandatory services. In Part 5 (Treatment Category) enter the band of the treatment
+        provided by the Performer referring the patient. The collection of the patient charge is the responsibility of the referring performer and is based on the charge band for the entire course of treatment.</p>
+    <p><strong>Examination </strong>– Tick this box when carrying out an examination for treatment planning purposes which would normally include charting of the teeth, recording of the periodontal condition and soft tissue
+        examination all of which would be detailed with other necessary clinical details on the clinical record.</p>
+    <p><strong>Antibiotic Items Prescribed </strong>– This box is completed when the patient is issued with a prescription containing antibiotic items. The number of antibiotic items should be entered (i.e. the number of antibiotic
+        treatments rather than the number of pills).</p>
+    <p><strong>Other Treatment </strong>– This box should be completed when any treatment has been provided for which there is no appropriate clinical dataset item in part 5a. This item can be entered in addition to other clinical data.</p>
+    <p><strong>DMF - Decayed teeth - Permanent </strong> (teeth with established caries) - Enter the<strong> number of permanent teeth</strong> that are decayed for all patients aged 6 years and over. If a tooth has decay and is also restored, count the tooth as decayed.</p>
+    <p><strong>Missing teeth - Permanent </strong>(Where a tooth has been extracted) – Enter the <strong>number of permanent teeth</strong> that are missing for all patients aged 12 years and over. Only count a tooth as missing if you are confident that that tooth was extracted.</p>
+    <p><strong>Filled teeth - Permanent </strong>– Enter the <strong>number of permanent teeth</strong> that are filled / restored for all patients aged 12 year and over. Include temporary restorations.</p>
+    <p><strong>Decayed teeth - Deciduous </strong>s (teeth with established caries) - Enter the <strong>number of deciduous teeth</strong> that are decayed for all patients up to and including patients aged 11. If a tooth has decay and is also restored, count the tooth as decayed.</p>
+    <p><strong>Missing teeth - Deciduous </strong>(Where a tooth has been extracted) – Enter the <strong>number of deciduous teeth</strong> that are missing for all patients aged 6 years and under. Only count a tooth as missing if you are confident that that tooth was extracted and not exfoliated.</p>
+    <p><strong>Filled teeth - Deciduous </strong>– Enter the <strong>number of deciduous teeth</strong> that are filled / restored for all patients aged 6 years and under. Include temporary restorations.</p>
+    <p><strong>NB: If there are no teeth in any of these categories or a category is not appropriate due to the age of the patient, enter a value of zero.</strong></p>
+    <p><strong>Best practice prevention according to Delivering Better Oral Health offered </strong>- This box should be completed prior to submitting the FP17. It should be ticked if you have followed the guidance as detailed in Delivering
+        Better Oral Health. The latest edition can be found at http://www.dh.gov.uk/prod_consum_dh/groups/dh_ digitalassets/documents/digitalasset/dh_102982.pdf</p>
+  </div>
+  <div id="guide6" style="display:none">
+    <p><strong>Treatment on Referral </strong>– Tick this box if you are treating a patient that has been referred to you. If the referral is for advanced mandatory services no patient charge will be deducted. If the patient is referred for
+        Additional Services (Sedation or Domiciliary Services) a charge will be taken, as this is considered a new course of treatment. A charge band in part 5 must also be present.</p>
+    <p><strong>Free repair/replacement </strong>– Tick this box if a restoration has to be repaired or replaced within 12 months of being provided. This applies to all patients whether exempt / remitted from charges or charge payers. If
+        other treatment is also provided on the same course of treatment and a patient charge is applicable, this should be entered in patient charge collected box in part 4, otherwise no patient charge will be deducted. A charge
+        band in part 5 must also be present and should be the band applicable to the whole course of treatment.</p>
+    <p><strong>Further treatment within 2 months </strong>– Tick this box if this course of treatment was required within 2 months of the completion of a previous course of treatment and is in the same or lower band. This applies to all
+        patients whether exempt / remitted from charges or charge payers. In this circumstance no patient charge will be deducted.<br><br>This does not apply if the original course of treatment was either ‘urgent’ treatment or was incomplete
+        treatment. Additionally if an ‘urgent’ treatment is required at any point within 2 months this cannot be claimed as continuation and must be claimed as a separate course of treatment. In these circumstances a patient charge will be deducted.</p>
+    <p><strong>Domiciliary Services </strong>– Tick this box if domiciliary services have been provided. If treatment has been provided then a charge band in part 5 should be Ticked and a patient charge will be deducted.</p>
+    <p><strong>Sedation Services </strong>– Tick this box if sedation services have been provided. If treatment has been provided then a charge band in part 5 should be ticked and a patient charge will be deducted.</p>
+  </div>
+  <div id="guide7" style="display:none">
+    <p>This box should be completed to show the recommended recall interval. The number of months should be between 3 and 24 months. If it has not been possible to provide the patient with a recommended recall interval, leave this part of the form blank.</p>
+  </div>
+  <div id="guide8" style="display:none">
+    <p><strong>For NHSBSA use ONLY</strong></p>
+  </div>
+  <div id="guide9" style="display:none">
+    <p><strong>Part 9 Declaration </strong>- The declaration must be signed and dated by a qualified dentist on every form. This would normally be the Performer responsible for the course of treatment.<br><br>Both declarations should be ticked on every form
+      submitted, with the exception of courses of treatment where the Performer decides to discontinue treatment. In this instance, only the first box is ticked.</p>
+  </div>
+  <div id="guide10" style="display:none">
+    <p><strong>Patient declaration</strong>All patients must read and sign this section before NHS dental services are provided. This may be signed and dated contemporaneously by the patient’s representative, as long as this is someone who is not
+      connected with the dental practice.</p>
+    <p>The patient can enter their ethnic group, but if they are not prepared to, tick the Patient declined box.</p>
+    <p><strong>Claim</strong>The patient must complete this section if they are claiming an exemption or remission. The patient must read the form before they complete it.</p>
+    <p>The patient must place a tick in a), b), c) or d), depending on the reason they are claiming an exemption or remission and enter the additional information that is required.</p>
+    <p>Please do not indicate where the patient should complete the form. It is the patient’s responsibility to make this claim. Please ask them to read the form and complete the section that applies to them. Please do not advise them about their entitlement.</p>
+    <p>This may be signed and dated contemporaneously by the patient’s representative as long this is someone who is not connected with the dental practice.</p>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
