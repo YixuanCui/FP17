@@ -9,6 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
 
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   * {
       box-sizing: border-box;
@@ -22,7 +24,7 @@
       float: left;
       padding: 15px;
     }
-  .col-1 {width: 8.33%;}
+  .col-1 {width: 10.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
   .col-4 {width: 33.33%;}
@@ -40,6 +42,7 @@
     </style>
 </head>
 <body>
+  
   <script>
   function myFunction(g) {
       var x = document.getElementById(g);
@@ -114,13 +117,15 @@
 
 <div class="col-7">
   <div class="panel-group" id="accordion">
+
     <div class="panel panel-default" id="P2">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="myFunction('guide1')">
-          Part 1 Provider name, address and location number</a>
+          Part 1: Provider name, address and location number</a>
         </h4>
       </div>
+      
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
           <form action="/action_page.php">
@@ -132,111 +137,316 @@
             <textarea name="providerAddress" rows="10" cols="30" placeholder="Please enter full address including postcode."></textarea><br><br>
             Performer number:<br>
             <input type="text" name="performerNumber" placeholder="e.g. 123456" maxlength="6"><br>
-            <input type="checkbox" name="ProformerProvider"> Proformer number same as provider<br><br>
-            <input type="submit" value="Submit">
+            Proformer number same as provider:<br>
+            <input type="checkbox" name="ProformerProvider"><br>
+            <input type="submit" value="Save">
           </form>
         </div>
       </div>
     </div>
+
     <div class="panel panel-default" id="P3">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="myFunction('guide2')">
-          Part 2 Patient Information</a>
+          Part 2: Patient Information</a>
         </h4>
       </div>
       <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+
+          <form action="/action_page.php">
+            Surname:<br>
+            <input type="text" name="surname" placeholder="e.g Doe" maxlength="14"><br><br>
+            First Forename:<br>
+            <input type="text" name="firstFroname" placeholder="e.g John" maxlength="14"><br>
+            House Number or Name:<br>
+            <input type="text" name="houseNoOrName" placeholder="e.g 4051" maxlength="14"><br>
+            Street:<br>
+            <input type="text" name="street" placeholder="e.g 91 Ridgemount Practice" maxlength="14"><br>
+            City or Town: <br>
+            <input type="text" name="cityOrTown" placeholder="e.g London" maxlength="14"><br>
+            County:<br>
+            <input type="text" name="county" placeholder="e.g Buckinghamshire" maxlength="14"><br>
+            Postcode:<br>
+            <input type="text" name="postcode" placeholder="e.g SW1A 1AA" maxlength="14"><br>
+            Previous surname if changed since last visit:<br>
+            <input type="text" name="previousSurname" placeholder="e.g Watson" maxlength="14"><br>
+            Title:<br>
+            <input type="text" name="title" placeholder="e.g Dr." maxlength="14"><br>
+            Sex:<br>
+            <input type="checkbox" name="gender" value="male"> Male
+            <input type="checkbox" name="gender" value="female"> Female
+            <input type="checkbox" name="gender" value="other"> Other  <br>
+            <input type="submit" value="Save">
+          </form>
+
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P4">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="myFunction('guide3')">
-          Part 3 Incomplete Treatment and Treatment Dates</a>
+          Part 3: Incomplete Treatment and Treatment Dates</a>
         </h4>
       </div>
       <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          <form action="/action_page.php">
+            Incomplete Treatment: <br>
+            <strong>1</strong> <input type="checkbox" name="incompleteTreatement" value="1">  
+            <strong>2</strong> <input type="checkbox" name="incompleteTreatement" value="2"> 
+            <strong>3</strong> <input type="checkbox" name="incompleteTreatement" value="3"> <br>
+            Date of acceptance: <br>
+            <input type="date" name="dateOfAcceptance"><br>
+            Completion same as Acceptance Date: <br>
+            <strong>1</strong> <input type="checkbox" name="completionAcceptanceDate" value="1"> <br>
+            Completion of last visit: <br>
+            <input type="date" name="dateOfAcceptance"><br> <br>
+            <input type="submit" value="Save">
+          </form> <br>
+        </div>
       </div>
     </div>
+
+
     <div class="panel panel-default" id="P5">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="myFunction('guide4')">
-          Part 4 Exemptions and Remissions</a>
+          Part 4: Exemptions and Remissions</a>
         </h4>
       </div>
       <div id="collapse4" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          Patient Under 18: <br>
+          <strong>1</strong> <input type="checkbox" name="under18" value="1"> <br>
+          Full Remission - HC2 cert.: <br>
+          <strong>2</strong> <input type="checkbox" name="fullRemission" value="2"> <br> 
+          Partial Remission - HC2 cert.: <br>
+          <strong>3</strong> <input type="checkbox" name="partialRemission" value="3"> <br>
+          Expectant Mother: <br>
+          <strong>4</strong> <input type="checkbox" name="expectantMother" value="4"> <br>
+          Nursing Mother: <br>
+          <strong>5</strong> <input type="checkbox" name="nursingMother" value="5"> <br>      
+          Aged 18 in full time education: <br>
+          <strong>6</strong> <input type="checkbox" name="student" value="6"> <br> 
+          Income Support: <br>
+          <strong>7</strong> <input type="checkbox" name="incomeSupport" value="7"> <br> 
+          NHS Tax Credit Exemption: <br>
+          <strong>8</strong> <input type="checkbox" name="NHSTaxCreditExemption" value="8"> <br> 
+          Income-based Jobseekers Allowance: <br>
+          <strong>9</strong> <input type="checkbox" name="incomeBased" value="9"> <br>
+          Pension Credit Guarantee Credit: <br>
+          <strong>D</strong> <input type="checkbox" name="pensionCredit" value="D"> <br>
+          Prisoner: <br>
+          <strong>J</strong> <input type="checkbox" name="prisoner" value="J"> <br>
+          Income-related employment and support allowance: <br>
+          <strong>N</strong> <input type="checkbox" name="incomeRelatedEmploymentSupport" value="N"> <br>
+          Universal Credit: <br>
+          <strong>P</strong> <input type="checkbox" name="universalCredit" value="P"> <br>
+          Evidence of Exemption or Remission seen: <br>
+          <strong>E</strong> 
+          Yes <input type="checkbox" name="evidenceExemption" value="Yes">
+          No <input type="checkbox" name="evidenceExemption" value="No"> <br>
+          Patient charge collected: <br>
+          &pound <input type="number" name="chargeCollected"><br> <br>
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+
+
     <div class="panel panel-default" id="P5a">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" onclick="myFunction('guide5')">
-          Part 5 Treatment Category</a>
+          Part 5: Treatment Category</a>
         </h4>
       </div>
       <div id="collapse5" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          Band 1: <br>
+          <strong>1</strong> <input type="checkbox" name="band1" value="1"> <br>
+          Band 2: <br>
+          <strong>2</strong> <input type="checkbox" name="band2" value="2"> <br> 
+          Band 3: <br>
+          <strong>3</strong> <input type="checkbox" name="band3" value="3"> <br>
+          Urgent Treatment: <br>
+          <strong>4</strong> <input type="checkbox" name="urgentTreatment" value="4"> <br>
+          Regulation 11 replacement appliance: <br>
+          <strong>5</strong> <input type="checkbox" name="regulation11" value="5"> <br>      
+          Prescription only: <br>
+          <strong>6</strong> <input type="checkbox" name="prescription" value="6"> <br> 
+          Denture Repairs: <br>
+          <strong>7</strong> <input type="checkbox" name="dentureRepairs" value="7"> <br> 
+          Bridge Repairs: <br>
+          <strong>8</strong> <input type="checkbox" name="bridgeRepairs" value="8"> <br> 
+          Arrest of bleeding: <br>
+          <strong>9</strong> <input type="checkbox" name="arrestBleeding" value="9"> <br>
+          Removal of Sutures: <br>
+          <strong>A</strong> <input type="checkbox" name="sutures" value="A"> <br>
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P6">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse5a" onclick="myFunction('guide5a')">
-          Part 5a Clinical Data Set</a>
+          Part 5a: Clinical Data Set</a>
         </h4>
       </div>
       <div id="collapse5a" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          Scale & Polish: <br>
+          <strong>1</strong> <input type="checkbox" name="scalePolish" value="1"> <br>
+          Fluoride varnish: <br>
+          <strong>2</strong> <input type="checkbox" name="fluorideVarnish" value="2"> <br> 
+          Fissure sealants: <br>
+          <strong>3</strong> <input type="number" name="fissureSealants" placeholder="No. of teeth"> <br>
+          Radiograph(s) taken: <br>
+          <strong>4</strong> <input type="number" name="radiographs" placeholder="No. of teeth"> <br>
+          Endodontic treatment: <br>
+          <strong>5</strong> <input type="number" name="endodontic" placeholder="No. of teeth"> <br>
+          Permanent Fillings and Sealant Restorations: <br>
+          <strong>6</strong> <input type="number" name="permanentFillingSealant" placeholder="No. of teeth"> <br>
+          Extractions: <br>
+          <strong>7</strong> <input type="number" name="extractions" placeholder="No. of teeth"> <br>
+          Crown(s) provided: <br>
+          <strong>8</strong> <input type="number" name="crowns" placeholder="No. of teeth"> <br>
+          Upper denture - Acrylic: <br>
+          <strong>9</strong> <input type="number" name="upperDentureAcrylic" placeholder="No. of teeth"> <br>
+          Lower denture - Acrylic: <br>
+          <strong>A</strong> <input type="number" name="lowerDentureMetal" placeholder="No. of teeth"> <br>
+          Upper denture - Metal: <br>
+          <strong>B</strong> <input type="number" name="upperDentureAcrylic" placeholder="No. of teeth"> <br>
+          Lower denture - Metal: <br>
+          <strong>C</strong> <input type="number" name="lowerDentureMetal" placeholder="No. of teeth"> <br>
+          Veneer(s) applied: <br>
+          <strong>D</strong> <input type="number" name="veneers" placeholder="No. of teeth"> <br>
+          Inlay(s): <br>
+          <strong>E</strong> <input type="number" name="inlay" placeholder="No. of teeth"> <br>
+          Bridge(s) fitted: <br>
+          <strong>F</strong> <input type="number" name="bridgeFitted" placeholder="No. of teeth"> <br>
+          Referral for advanced mandatory services (AMS): <br>
+          <strong>G</strong> <input type="text" name="referralAMS" placeholder="Enter Band"> <br>
+          Examination: <br>
+          <strong>H</strong> <input type="checkbox" name="examination" value="Yes"> <br>
+          Antibiotic items prescribed: <br>
+          <strong>J</strong> <input type="text" name="antibiotic" placeholder="No. of items"> <br>
+          Other Treatment: <br>
+          <strong>K</strong> <input type="checkbox" name="otherTreatment" value="Yes"> <br>
+          <em>Best Practice prevention according to Delivering Better Oral Health Offered</em> <br>
+          <strong>L</strong> <input type="checkbox" name="deliveringBetterOralHealth" value="Yes"> <br>
+          Decayed Teeth: <br>
+          <strong>M</strong> <input type="number" name="decayedTeethPerm" placeholder="No. of teeth permanent"> <br>
+          <strong>N</strong> <input type="number" name="decayedTeethDeciduous" placeholder="No. of teeth deciduous"> <br>
+          Missing Teeth: <br>
+          <strong>P</strong> <input type="number" name="missingTeethPerm" placeholder="No. of teeth permanent"> <br>
+          <strong>R</strong> <input type="number" name="missingTeethDeciduous" placeholder="No. of teeth deciduous"> <br>
+          Filled Teeth: <br>
+          <strong>S</strong> <input type="number" name="filledTeethPerm" placeholder="No. of teeth permanent"> <br>
+          <strong>T</strong> <input type="number" name="filledTeethDeciduous" placeholder="No. of teeth deciduous"> <br> <br>
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P7">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" onclick="myFunction('guide6')">
-          Part 6 Other services</a>
+          Part 6: Other services</a>
         </h4>
       </div>
       <div id="collapse6" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          Treatment on Referral: <br>
+          <strong>1</strong> <input type="checkbox" name="referral" value="1"> <br>
+          Free repair/replacement: <br>
+          <strong>2</strong> <input type="checkbox" name="repairOrReplacement" value="2"> <br> 
+          Further Treatment within 2 months: <br>
+          <strong>3</strong> <input type="checkbox" name="furtherTreatment" value="3"> <br>
+          Domiciliary Services: <br>
+          <strong>4</strong> <input type="checkbox" name="domiciliary" value="4"> <br>
+          Sedation Services: <br>
+          <strong>5</strong> <input type="checkbox" name="sedation" value="5"> <br>    
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P8">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" onclick="myFunction('guide7')">
-          Part 7 NICE Guidance</a>
+          Part 7: NICE Guidance</a>
         </h4>
       </div>
       <div id="collapse7" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          I have given preventative advice and recommended a recall interval, taking into account NICE guidance, that I regard as appropriate to the patient’s current oral health. <br>
+          <br>No. of Months<br>
+          <input type="number" name="chargeCollected"><br><br>
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P9">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" onclick="myFunction('guide8')">
-          Part 8 NHSBSA Use Only</a>
+          Part 8: NHSBSA Use Only</a>
         </h4>
       </div>
       <div id="collapse8" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+            <strong>M</strong> 
+            <input type="text" name="NHSBSA1" maxlength="2"><br> <br>
+            <strong>M</strong> 
+            <input type="text" name="NHSBSA2" maxlength="2"><br> <br>
+            <strong>M</strong> 
+            <input type="text" name="NHSBSA3" maxlength="2"><br> <br>
+            &pound <input type="number" name="chargeCollected"><br> <br>
+            <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
+
     <div class="panel panel-default" id="P10">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" onclick="myFunction('guide9')">
-          Part 9 Declaration</a>
+          Part 9: Declaration</a>
         </h4>
       </div>
       <div id="collapse9" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          All the necessary care and treatment that the patient is willing to undergo will be provided:
+          <input type="checkbox" name="completeTreatment" value = "Yes"> <br> <br>
+          All the currently necessary care and treatment that the patient is willing to undergo has been carried out.
+          <input type="checkbox" name="completeTreatment" value = "Yes"> <br> <br>
+          <em> I declare that I am properly entitled to practise under the current dental regulations and that the information I have given on this form is correct and complete. I understand that if it is not, appropriate action may be taken. For the purpose of veri cation of this and the prevention and detection of fraud and incorrectness, I consent to the disclosure of relevant information from this form to and by the NHS Business Services Authority. </em> <br> <br>
+          Signature:
+          <input type="text" name="signature" maxlength="100"><br> <br>
+          Date: 
+          <input type="date" name="dateOfDeclaration"><br> <br>
+          <input type="submit" value="Save">
+        </div>
       </div>
     </div>
+    
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -245,14 +455,19 @@
         </h4>
       </div>
       <div id="collapse10" class="panel-collapse collapse">
-        <div class="panel-body">xxx</div>
+        <div class="panel-body">
+          I consent to the dental provider named overleaf, or their representative, to examine me under the NHS and to give me any necessary care and treatment that I am willing to undergo within NHS arrangements. <br><br>
+          <strong>I agree to pay the statutory charges for the NHS dental service I receive, unless I have completed a valid claim for free or reduced cost NHS dental services below, and that I may have to pay the full amount prior to treatment. I agree, if necessary, to be examined and/or to have my dental records examined by the NHS Business Services Authority or other authorised bodies. </strong> <br><br>
+          I declare that the information I give on this form is correct and complete. I understand that if it is not, appropriate action may be taken against me. To enable the NHS to prevent and detect fraud and mistakes, and to secure the effective and ef cient delivery of NHS and related services relevant information on your NHS treatment may be shared with, and by the NHS Business Services Authority to NHS England, Department for Work and Pensions, HM Revenue & Customs, the Health and Social Care Information Centre, local authorities, and bodies performing functions on their behalf. Some data processing will take place in India before processing in the UK. Your personal data will be deleted within 10 years of receipt into our systems. <br>
+          <br> <input type="submit" value="Save">
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="col-3">
-  <h1>Guidlines</h1>
+  <h1>Guidelines</h1>
 
   <div id="guide1" style="display:none">
     <p><strong>Patient’s NHS No. </strong>- Enter the 10 digit NHS number, this is an optional field.</p>
@@ -374,7 +589,7 @@
       submitted, with the exception of courses of treatment where the Performer decides to discontinue treatment. In this instance, only the first box is ticked.</p>
   </div>
   <div id="guide10" style="display:none">
-    <p><strong>Patient declaration</strong>All patients must read and sign this section before NHS dental services are provided. This may be signed and dated contemporaneously by the patient’s representative, as long as this is someone who is not
+    <p><strong>Patient declaration</strong> All patients must read and sign this section before NHS dental services are provided. This may be signed and dated contemporaneously by the patient’s representative, as long as this is someone who is not
       connected with the dental practice.</p>
     <p>The patient can enter their ethnic group, but if they are not prepared to, tick the Patient declined box.</p>
     <p><strong>Claim</strong>The patient must complete this section if they are claiming an exemption or remission. The patient must read the form before they complete it.</p>
